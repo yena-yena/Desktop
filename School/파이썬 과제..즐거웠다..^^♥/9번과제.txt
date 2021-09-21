@@ -1,0 +1,126 @@
+length = int(input('우물의 깊이를 입력해주세요 : '))
+    height = 7
+    day = 1
+    print('day', day, ': 달팽이의 위치 : ', height, 'm')
+while True:
+    if length > height: #우물깊이>달팽위치
+        height = height - 3
+        height = height + 7
+        day = day + 1
+        print('day', day, ': 달팽이의 위치 : ', height, 'm')
+
+        if length < height:
+            height = height + 3
+            print('day', day, ': 달팽이의 위치 : ', height, 'm')
+            print("\n달팽이가 우물을 탈출하는데", day, '일 걸렸습니다. ')
+
+            i = int(input('1. 시작 / 2. 종료 \n 다시 시작하시겠습니까? : '))
+
+            if i == 1:
+                continue  ##컨티뉴문을 작성해서 다시 와일문의 처음으로 돌아가고 싶을때 어떻게 해야 하는지??
+
+            elif i == 2:
+                print('종료합니다.')
+            break
+        print('day', day, ': 달팽이의 위치 : ', height, 'm') #11,15줄 생략하고 26번째줄 하나만 쓰고싶은데 들여쓰기를 이렇게 했을 때 오류가 난다. 그 이유는??
+
+
+    elif length < height:
+        print("\n달팽이가 우물을 탈출하는데", day, '일 걸렸습니다. ')
+        i=int(input('1. 시작 / 2. 종료 \n 다시 시작하시겠습니까? : '))
+        if i == 1:
+            continue
+        elif i==2:
+            print('종료합니다.')
+        break
+
+
+
+---------------------------
+while True:
+    length = int(input('우물의 깊이를 입력해주세요 : '))
+    height = 7
+    day = 1
+    print('day', day, ': 달팽이의 위치 : ', height, 'm')
+    if length > height: #우물깊이>달팽위치
+        height = height - 3
+        height = height + 7
+        day = day + 1
+        print('day', day, ': 달팽이의 위치 : ', height, 'm')
+
+        if length < height:
+            height = height + 3
+            print('day', day, ': 달팽이의 위치 : ', height, 'm')
+            print("\n달팽이가 우물을 탈출하는데", day, '일 걸렸습니다. ')
+
+            i = int(input('1. 시작 / 2. 종료 \n 다시 시작하시겠습니까? : '))
+
+            if i == 1:
+                continue  ##컨티뉴문을 작성해서 다시 와일문의 처음으로 돌아가고 싶을때 어떻게 해야 하는지??
+
+            elif i == 2:
+                print('종료합니다.')
+            break
+        print('day', day, ': 달팽이의 위치 : ', height, 'm') #11,15줄 생략하고 26번째줄 하나만 쓰고싶은데 들여쓰기를 이렇게 했을 때 오류가 난다. 그 이유는??
+
+
+    elif length < height:
+        print("\n달팽이가 우물을 탈출하는데", day, '일 걸렸습니다. ')
+        i=int(input('1. 시작 / 2. 종료 \n 다시 시작하시겠습니까? : '))
+        if i == 1:
+            continue
+        elif i==2:
+            print('종료합니다.')
+        break
+
+--------------------------------------dd.py ( 20일때 dayn출력 가능)
+length = int(input('우물의 깊이를 입력해주세요 : '))
+height = 7
+day = 1
+print('day', day, ': 달팽이의 위치 : ', height, 'm')
+
+while True:
+
+    if length > height: #우물깊이>달팽위치
+        height = height + 4
+        day = day + 1
+
+        if length < height:
+            height = height + 3
+            print('day', day, ': 달팽이의 위치 : ', height, 'm')
+            print("\n달팽이가 우물을 탈출하는데", day, '일 걸렸습니다. ')
+
+            i = int(input('1. 시작 / 2. 종료 \n 다시 시작하시겠습니까? : '))
+
+            if i == 1:
+                continue
+
+            elif i == 2:
+                print('종료합니다.')
+            break
+        print('day', day, ': 달팽이의 위치 : ', height, 'm')
+
+
+    elif length < height:
+        print("\n달팽이가 우물을 탈출하는데", day, '일 걸렸습니다. ')
+        i=int(input('1. 시작 / 2. 종료 \n 다시 시작하시겠습니까? : '))
+        if i == 1:
+            continue
+        elif i==2:
+            print('종료합니다.')
+        break
+ 
+-------------------------------dd.py 12번째줄
+        if length < height:
+            height = height + 3
+            print('day', day, ': 달팽이의 위치 : ', height, 'm')
+            print("\n달팽이가 우물을 탈출하는데", day, '일 걸렸습니다. ')
+
+            i = int(input('1. 시작 / 2. 종료 \n 다시 시작하시겠습니까? : '))
+
+            if i == 1:
+                continue
+
+            elif i == 2:
+                print('종료합니다.')
+            break

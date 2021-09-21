@@ -1,0 +1,65 @@
+class Student: # 클래스의 이름
+
+    def __init__(self, name,age,major,id): #생성자 선언 self 뒤에는 매개변수들이 온다.
+        self.name = name # self.변수명 = 매개변수 or 값
+        self.age = age
+        self.major = major
+        self.id = id
+
+    def inquire(self):
+        print('이름:', self.name)
+        print('나이:', self.age)
+        print('학번:', self.major)
+        print('학번:', self.id)
+        print("----------")
+
+studentDB = []
+
+
+while True: #while을 이용한 반복문 break 혹은 특정 조건을 만족시키기 전까지 지속된다.
+    print("================\n1)추가 2)삭제 3)수정\n4)조회 5)종료\n================")
+    try:
+        selected = int(input("원하시는 기능을 선택하세요: "))
+        print("================")
+
+        if selected == 1: #+
+            name = input('name : ')
+            age = input('age : ')
+            major = input('major : ')
+            id = input('id : ')
+            student = Student(name, age, major, id)
+            studentDB.append(student)
+
+        elif selected==2: #-
+            name = input('name : ')
+            for i in studentDB:
+                if i.name == name:
+                    StudentDB.remove(i)
+
+        elif selected==3: #fix
+            name = input('name : ')
+            for i in studentDB:
+                if i.name == name:
+                    age = input('age : ')
+                    grade = input('grade : ')
+                    major = input('major : ')
+
+                    i.age = age
+                    i.grade = grade
+                    i.major = major
+                    break
+
+        elif selected == 4: #find
+            name = input('name : ')
+            for i in studentDB:
+                if i.name == name:
+                    i.inquire()
+
+        elif selected == 5:
+            break
+
+        else:
+            raise ValueError
+    except ValueError:
+        print('1~5중에 하나를 입력하세요.')
+-------------------------------------------------------------fintest 원본임
